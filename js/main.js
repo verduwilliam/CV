@@ -22,25 +22,25 @@ var languagesJSON = {
       "title" : "À propos de moi",
       "lines" : [
         "Je suis un développeur web/mobile de "+age+" ans, ayant une préférence pour le JavaScript et TypeScript, ainsi que leurs frameworks, tels qu'Angular ou React.",
-        "Membre de la promotion 2017 de l'école PopSchool Valenciennes, j'ai pu être formé à de nombreux languages, aussi bien en front-end qu'en back-end.",
+        "Membre de la promotion 2017 de l'école PopSchool Valenciennes, j'ai été formé à de nombreux languages, aussi bien en front-end qu'en back-end.",
         "D'un naturel curieux et autonome, je suis actuellement à la recherche d'un emploi où je pourrais démontrer le panel de mes connaissances à travers de nombreux projets !"
       ]
     },
     "exp" : {
       "title" : "Expérience/formation",
-      "title1" : "expérience en tant que développeur",
+      "title1" : "expérience",
       "title2" : "formations et diplômes",
       "jobs" : [
         {
           "name" : "Agence Big Moustache",
           "city" : "Anzin",
-          "role" : "Employé en tant que développeur web/mobile",
+          "role" : "Développeur web/mobile",
           "year" : "2017 - 2020"
         },
         {
           "name" : "Ecklipse",
           "city" : "Villeneuve-d'Ascq",
-          "role" : "Stage en tant que développeur front-end",
+          "role" : "Développeur front-end (stage)",
           "year" : "2017"
         }
       ],
@@ -83,25 +83,25 @@ var languagesJSON = {
       "title" : "About me",
       "lines" : [
         "I'm a "+age+" years old web/mobile developer, with a liking for JavaScript and TypeScript, as well as their frameworks, such as Angular or React.",
-        "Member of PopSchool Valenciennes graduating class of 2017, I was able to be trained in many languages, front-end and back-end.",
+        "Member of PopSchool Valenciennes graduating class of 2017, I was trained in many languages, front-end and back-end.",
         "Being curious and independent, I'm currently looking for a job where I'll can demonstrate my knowledge through numerous projects !"
       ]
     },
     "exp" : {
       "title" : "Experience/qualifications",
-      "title1" : "experience as a developer",
+      "title1" : "experience",
       "title2" : "qualifications",
       "jobs" : [
         {
           "name" : "Agence Big Moustache",
           "city" : "Anzin",
-          "role" : "Working as a web/mobile developer",
+          "role" : "Web/mobile developer",
           "year" : "2017 - 2020"
         },
         {
           "name" : "Ecklipse",
           "city" : "Villeneuve-d'Ascq",
-          "role" : "Internship as a front-end developer",
+          "role" : "Front-end developer (internship)",
           "year" : "2017"
         }
       ],
@@ -192,11 +192,7 @@ function loadLanguage() {
   document.getElementById("about").getElementsByTagName("h3")[0].innerHTML = languagesJSON[language].about.title
   let txtAboutMe = ""
   let promiseAboutMe = languagesJSON[language].about.lines.forEach((child)=>{
-    if(txtAboutMe==""){
-      txtAboutMe = child
-    }else{
-      txtAboutMe = txtAboutMe + "<br>" + child
-    }
+    txtAboutMe = txtAboutMe + "<div>" + child + "</div>"
   })
   Promise.all([promiseAboutMe]).then((vals)=>{
     document.getElementById("about").getElementsByTagName("div")[0].innerHTML = txtAboutMe
@@ -213,17 +209,26 @@ function loadLanguage() {
     if(expPro==""){
       expPro = `
       <div class="expDiv">
-        <span class="expBoite">`+child.name+`</span> - `+child.city+`<br>
-        `+child.role+`<br>
-        <span class="expYear">`+child.year+`</span>
+        <div>
+          <span class="expBoite">`+child.name+`</span> - `+child.city+`<br>
+          `+child.role+`
+        </div>
+        <div>
+          <span class="expYear">`+child.year+`</span>
+        </div>
       </div>
       `
     }else{
       expPro = expPro + `
+      <div class="divider2"></div>
       <div class="expDiv">
-        <span class="expBoite">`+child.name+`</span> - `+child.city+`<br>
-        `+child.role+`<br>
-        <span class="expYear">`+child.year+`</span>
+        <div>
+          <span class="expBoite">`+child.name+`</span> - `+child.city+`<br>
+          `+child.role+`<br>
+        </div>
+        <div>
+          <span class="expYear">`+child.year+`</span>
+        </div>
       </div>
       `
     }
@@ -232,17 +237,26 @@ function loadLanguage() {
     if(formations==""){
       formations = `
       <div class="expDiv">
-        <span class="expBoite">`+child.name+`</span><br>
-        `+child.school+`<br>
-        <span class="expYear">`+child.year+`</span>
+        <div>
+          <span class="expBoite">`+child.name+`</span><br>
+          `+child.school+`
+        </div>
+        <div>
+          <span class="expYear">`+child.year+`</span>
+        </div>
       </div>
       `
     }else{
       formations = formations + `
+      <div class="divider2"></div>
       <div class="expDiv">
-        <span class="expBoite">`+child.name+`</span><br>
-        `+child.school+`<br>
-        <span class="expYear">`+child.year+`</span>
+        <div>
+          <span class="expBoite">`+child.name+`</span><br>
+          `+child.school+`
+        </div>
+        <div>
+          <span class="expYear">`+child.year+`</span>
+        </div>
       </div>
       `
     }
