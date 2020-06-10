@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>William VERDU</title>
+
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <div id="language"></div>
+
+  <div id="header">
+    <div class="headerOption" onclick="customScroll('home')">
+      <img src="assets/imgs/headerHome.png" alt="Accueil">
+      <span class="tooltipBottom">Accueil</span>
+    </div>
+    <div class="headerOption" onclick="customScroll('anchorAbout')">
+      <img src="assets/imgs/headerAbout.png" alt="A propos">
+      <span class="tooltipBottom">À propos</span>
+    </div>
+    <div class="headerOption" onclick="customScroll('anchorExp')">
+      <img src="assets/imgs/headerExp.png" alt="Expérience/formation">
+      <span class="tooltipBottom">Expérience/formation</span>
+    </div>
+    <div class="headerOption" onclick="customScroll('anchorSkills')">
+      <img src="assets/imgs/headerSkills.png" alt="Compétences">
+      <span class="tooltipBottom">Compétences</span>
+    </div>
+    <div class="headerOption" onclick="customScroll('anchorContact')">
+      <img src="assets/imgs/headerContact.png" alt="Contact">
+      <span class="tooltipBottom">Contact</span>
+    </div>
+  </div>
+
+  <div id="home">
+    <div id="flag" onclick="changeLanguage()">
+      <img src="assets/imgs/uk.jpg" alt="" id="flagImg">
+    </div>
+    <div>
+      <h1>William VERDU</h1>
+      <h2>Développeur web/</h2>
+      <a href="https://www.linkedin.com/in/william-verdu-239388140/" target="_blank" class="btnLink">Mon Linkedin <img src="assets/imgs/linkedin.png" alt="Linkedin"></a><br>
+      <a href="assets/pdf/cv.pdf" target="_blank" class="btnLink">Mon CV (PDF) <img src="assets/imgs/pdf.png" alt="PDF"></a>
+    </div>
+    <div class="arrowScroll" onclick="customScroll('anchorAbout')">
+      <img src="assets/imgs/arrowDown.png" alt="scroll">
+    </div>
+  </div>
+
+  <span id="anchorAbout"></span>
+  <div id="about">
+    <h3>à propos de moi</h3>
+    <div>
+      Je suis un développeur web/mobile de 26 ans, ayant une préférence pour le JavaScript et TypeScript, ainsi que leurs frameworks, tels qu'Angular ou React.<br>
+      Membre de la promotion 2017 de l'école PopSchool de Valenciennes, j'ai pu être formé à de nombreux languages, aussi bien en front-end qu'en back-end.<br>
+      D'un naturel curieux et autonome, je suis actuellement à la recherche d'un emploi où je pourrais démontrer le panel de mes connaissances à travers de nombreux projets !
+    </div>
+  </div>
+
+  <span id="anchorExp"></span>
+  <div id="exp">
+    <h3>expérience en tant que développeur</h3>
+    <div id="expPro"></div>
+    <!-- <div class="expDiv">
+      <span class="expBoite">Agence Big Moustache</span> - Anzin<br>
+      Employé en tant que développeur web/mobile<br>
+      <span class="expYear">2017 - 2020</span>
+    </div>
+    <div class="expDiv">
+      <span class="expBoite">Ecklipse</span> - Villeneuve-d'Ascq<br>
+      Stage en tant que développeur front-end<br>
+      <span class="expYear">2017</span>
+    </div> -->
+
+    <div class="divider"></div>
+
+    <h3>formations et diplômes</h3>
+    <div id="formations"></div>
+    <!-- <div class="expDiv">
+      <span class="expBoite">Développeur web</span><br>
+      PopSchool Valenciennes<br>
+      <span class="expYear">2017</span>
+    </div>
+    <div class="expDiv">
+      <span class="expBoite">Baccalauréat S</span><br>
+      Lycée du Val d'Argens<br>
+      <span class="expYear">2012</span>
+    </div> -->
+  </div>
+
+  <span id="anchorSkills"></span>
+  <div id="skills">
+    <h3>Compétences</h3>
+    <div id="containerSkills">
+      <div class="itemSkills">
+        <img src="assets/imgs/html.png" alt="HTML"><br>
+        HTML
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/css.png" alt="CSS"><br>
+        CSS
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/sass.png" alt="Sass"><br>
+        Sass
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/js.png" alt="JavaScript"><br>
+        JavaScript
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/ts.png" alt="TypeScript"><br>
+        TypeScript
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/angular.png" alt="Angular"><br>
+        Angular
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/ionic.png" alt="Ionic"><br>
+        Ionic
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/nodejs.png" alt="NodeJS"><br>
+        NodeJS
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/react.png" alt="React"><br>
+        React
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/php.png" alt="PHP"><br>
+        PHP
+      </div>
+      <div class="itemSkills">
+        <img src="assets/imgs/photoshop.png" alt="Photoshop"><br>
+        Photoshop
+      </div>
+    </div>
+    <div class="imgSkills"></div>
+  </div>
+
+  <span id="anchorContact"></span>
+  <div id="contact">
+    <h3>contact</h3>
+    <div class="contactDetails">
+      <div class="gras">Email</div>
+      <div onclick="copyClipboard('email')">
+        <div class="btnContact containerTooltipTop">
+          verduwilliam@gmail.com
+          <span class="tooltipTop" id="txtCopyEmail">Copier dans le presse-papier</span>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="contactDetails">
+      <div class="gras">Téléphone</div>
+      <div onclick="copyClipboard('tel')">
+        <div class="btnContact containerTooltipTop">
+          06 11 31 11 17
+          <span class="tooltipTop" id="txtCopyTel">Copier dans le presse-papier</span>
+        </div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="contactDetails">
+      <div class="gras">Adresse</div>
+      <div>
+        34 rue Pasteur <br>
+        Appartement 3 <br>
+        59300 VALENCIENNES
+      </div>
+    </div>
+
+    <div id="copyright">Copyright © 2020 VERDU William</div>
+  </div>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>

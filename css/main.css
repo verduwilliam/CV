@@ -1,0 +1,406 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: "NotoSansHK", sans-serif;
+}
+
+a {
+  color: #F06000;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Volkhov", serif;
+}
+
+h3 {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.arrowScroll {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+  right: 45%;
+  width: 20px;
+  z-index: 1;
+}
+
+.arrowScroll img {
+  width: 100%;
+  animation: bounceAnim 2s infinite;
+  -webkit-animation: bounceAnim 2s infinite;
+  -moz-animation: bounceAnim 2s infinite;
+  -o-animation: bounceAnim 2s infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 2s;
+}
+
+.headerOption {
+  display: inline-block;
+  position: relative;
+  width: 15%;
+  text-align: center;
+}
+
+.headerOption img {
+  width: 2em;
+  vertical-align: middle;
+  transition: 0.5s;
+}
+
+.headerOption:hover img {
+  filter: brightness(0.5) sepia(1) saturate(10000%);
+}
+
+.headerOption .tooltipBottom {
+  visibility: hidden;
+  width: 95%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 2.5%;
+  /* margin-left: -60px; */
+}
+
+.headerOption:hover .tooltipBottom {
+  visibility: visible;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background: #A8A8A8;
+  margin: 25px 10%;
+}
+
+.btnLink {
+  display: inline-block;
+  background: white;
+  color: #F06000;
+  padding: 10px;
+  border: 2px solid #F06000;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: 0.5s;
+}
+
+.btnLink:hover {
+  font-size: 1.2em;
+}
+
+.btnLink img {
+  width: 1em;
+  vertical-align: middle;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  padding: 15px 0;
+  color: white;
+  text-align: center;
+  z-index: 999;
+}
+
+#home {
+  text-align: center;
+  width: 100%;
+  background: url("../assets/imgs/header.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  vertical-align: middle;
+}
+
+#home div {
+  margin: auto;
+  text-align: center;
+}
+
+#home h1 {
+  font-size: 5em;
+}
+
+#home h2 {
+  color: #A8A8A8;
+  font-size: 2em;
+}
+
+#about,
+#exp,
+#skills,
+#contact {
+  width: 100%;
+  padding: 45px 0;
+}
+
+#about,
+#skills {
+  background: white;
+}
+
+#about h3,
+#skills h3 {
+  color: #333;
+}
+
+#exp,
+#contact {
+  background: #333;
+  color: white;
+}
+
+#about div {
+  /* width: 100%; */
+  padding: 0 15px;
+  line-height: 1.5em;
+}
+
+.expDiv {
+  padding: 15px 9%;
+  line-height: 1.35em;
+}
+
+.expBoite {
+  font-family: "NotoSansHK-Black";
+  font-size: 1.1em;
+}
+
+.expYear {
+  font-family: "NotoSansHK-Thin";
+  color: #F06000;
+  /* color: #A8A8A8; */
+}
+
+#containerSkills {
+  padding: 0;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemSkills {
+  width: 33%;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.itemSkills img {
+  width: 50%;
+}
+
+#contact .gras {
+  font-family: "NotoSansHK-Bold";
+  padding-top: 25px;
+}
+
+.btnContact {
+  display: inline-block;
+  background: white;
+  color: #F06000;
+  padding: 10px;
+  border: 2px solid #F06000;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btnContact img {
+  width: 1em;
+  vertical-align: middle;
+}
+
+.contactDetails {
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 25px;
+  display: grid;
+}
+
+.contactDetails div:first-child {
+  grid-column: 1 / 2;
+  text-align: left;
+}
+
+.contactDetails div:last-child {
+  grid-column: 2 / 2;
+  text-align: right;
+}
+
+.containerTooltipTop {
+  position: relative;
+  display: inline-block;
+}
+
+.containerTooltipTop .tooltipTop {
+  visibility: hidden;
+  width: 80%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -40%;
+}
+
+.containerTooltipTop .tooltipTop::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.containerTooltipTop:hover .tooltipTop {
+  visibility: visible;
+}
+
+
+#copyright {
+  text-align: center;
+  color: #888;
+  font-size: 0.7em;
+}
+
+#flag {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  width: 50px;
+}
+
+#flag img {
+  width: 100%;
+  border-radius: 7px;
+}
+
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 0.8em;
+  }
+
+  h2 {
+    font-size: 0.7em;
+  }
+
+  .contactDetails {
+    display: block;
+  }
+
+  .contactDetails div:first-child,
+  .contactDetails div:last-child {
+    grid-column: 1 / 1;
+    text-align: left;
+  }
+
+  .headerOption:hover .tooltipBottom,
+  .containerTooltipTop:hover .tooltipTop {
+    visibility: hidden;
+  }
+
+  .headerOption:active .tooltipBottom,
+  .containerTooltipTop:active .tooltipTop {
+    visibility: visible;
+  }
+}
+
+
+
+
+@-webkit-keyframes bounceAnim {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  40%, 60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes bounceAnim {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+  }
+  40%, 60% {
+    -moz-transform: translateY(-15px);
+  }
+}
+
+@-o-keyframes bounceAnim {
+  0%, 20%, 50%, 80%, 100% {
+    -o-transform: translateY(0);
+  }
+  40%, 60% {
+    -o-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounceAnim {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40%, 60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+
+@font-face {
+ font-family: "NotoSansHK";
+ src: url("../assets/fonts/NotoSansHK-Regular.otf");
+}
+
+@font-face {
+ font-family: "NotoSansHK-Thin";
+ src: url("../assets/fonts/NotoSansHK-Thin.otf");
+}
+
+@font-face {
+ font-family: "NotoSansHK-Bold";
+ src: url("../assets/fonts/NotoSansHK-Bold.otf");
+}
+
+@font-face {
+ font-family: "NotoSansHK-Black";
+ src: url("../assets/fonts/NotoSansHK-Black.otf");
+}
+
+@font-face {
+ font-family: "Volkhov";
+ src: url("../assets/fonts/Volkhov-Regular.ttf");
+}
+
+@font-face {
+ font-family: "Volkhov-Bold";
+ src: url("../assets/fonts/Volkhov-Regular.ttf");
+}
